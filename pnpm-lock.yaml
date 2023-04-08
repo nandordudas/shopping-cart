@@ -9,6 +9,12 @@ dependencies:
     version: 18.2.0(react@18.2.0)
 
 devDependencies:
+  '@tsconfig/strictest':
+    specifier: ^2.0.0
+    version: 2.0.0
+  '@tsconfig/vite-react':
+    specifier: ^1.0.1
+    version: 1.0.1
   '@types/react':
     specifier: ^18.0.28
     version: 18.0.28
@@ -19,8 +25,8 @@ devDependencies:
     specifier: ^3.0.0
     version: 3.0.0(@swc/helpers@0.5.0)(vite@4.2.0)
   typescript:
-    specifier: ^4.9.3
-    version: 4.9.3
+    specifier: ^5.0.4
+    version: 5.0.4
   vite:
     specifier: ^4.2.0
     version: 4.2.0
@@ -342,6 +348,14 @@ packages:
       tslib: 2.5.0
     dev: true
 
+  /@tsconfig/strictest@2.0.0:
+    resolution: {integrity: sha512-E0dpiZNdwO20c8d3seh7OmjAvDpwoRkTcU6M8cvggzB45Bd45tyTU2XJeA5Wfq+8NzVGhunvqOJ30AjSkywMXA==}
+    dev: true
+
+  /@tsconfig/vite-react@1.0.1:
+    resolution: {integrity: sha512-6Tv0UI88QPSkNobzoI8tMXjHX1j723yPBhrQ+z+gphvTIj7KcH0KF1MjUlPrIgh5TEpRMH8jF5ezZ5qQ0iHGvw==}
+    dev: true
+
   /@types/prop-types@15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
@@ -522,9 +536,9 @@ packages:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
     dev: true
 
-  /typescript@4.9.3:
-    resolution: {integrity: sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==}
-    engines: {node: '>=4.2.0'}
+  /typescript@5.0.4:
+    resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
+    engines: {node: '>=12.20'}
     hasBin: true
     dev: true
 
