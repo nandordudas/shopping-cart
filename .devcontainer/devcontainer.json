@@ -25,48 +25,46 @@
         "mutantdino.resourcemonitor"
       ],
       "settings": {
-        "settings": {
-          "editor.detectIndentation": false,
-          "editor.insertSpaces": true,
-          "editor.tabSize": 2,
-          "files.encoding": "utf8",
-          "files.eol": "\n",
-          "files.insertFinalNewline": true,
-          "files.trimTrailingWhitespace": true,
-          "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true,
-            "source.fixAll": false,
-            "source.organizeImports": false
-          },
-          "editor.formatOnSave": false,
-          "editor.formatOnSaveMode": "modificationsIfAvailable",
-          "editor.formatOnType": false,
-          "eslint.codeActionsOnSave.mode": "problems",
-          "eslint.validate": [
-            "html",
-            "javascript",
-            "json",
-            "json5",
-            "jsonc",
-            "markdown",
-            "typescript",
-            "vue",
-            "yaml"
-          ],
-          "errorLens.excludeBySource": [
-            "cSpell",
-            "eslint"
-          ],
-          "errorLens.fontStyleItalic": true,
-          "errorLens.fontWeight": "100",
-          "editor.rulers": [
-            80,
-            120
-          ],
-          "editor.wordWrapColumn": 120,
-          "typescript.tsdk": "node_modules/typescript/lib",
-          "typescript.updateImportsOnFileMove.enabled": "always"
-        }
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "files.encoding": "utf8",
+        "files.eol": "\n",
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true,
+          "source.fixAll": false,
+          "source.organizeImports": false
+        },
+        "editor.formatOnSave": false,
+        "editor.formatOnSaveMode": "modificationsIfAvailable",
+        "editor.formatOnType": false,
+        "eslint.codeActionsOnSave.mode": "problems",
+        "eslint.validate": [
+          "html",
+          "javascript",
+          "json",
+          "json5",
+          "jsonc",
+          "markdown",
+          "typescript",
+          "vue",
+          "yaml"
+        ],
+        "errorLens.excludeBySource": [
+          "cSpell",
+          "eslint"
+        ],
+        "errorLens.fontStyleItalic": true,
+        "errorLens.fontWeight": "100",
+        "editor.rulers": [
+          80,
+          120
+        ],
+        "editor.wordWrapColumn": 120,
+        "typescript.tsdk": "node_modules/typescript/lib",
+        "typescript.updateImportsOnFileMove.enabled": "always"
       }
     }
   }
