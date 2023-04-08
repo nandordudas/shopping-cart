@@ -1,11 +1,11 @@
 {
   "name": "app",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
+    "dev": "vite",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
@@ -14,12 +14,12 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/react": "^18.0.28",
+    "@tsconfig/strictest": "^2.0.0",
+    "@tsconfig/vite-react": "^1.0.1",
     "@types/react-dom": "^18.0.11",
+    "@types/react": "^18.0.28",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "typescript": "^5.0.4",
-    "vite": "^4.2.0",
-    "@tsconfig/strictest": "^2.0.0",
-    "@tsconfig/vite-react": "^1.0.1"
+    "vite": "^4.2.0"
   }
 }
