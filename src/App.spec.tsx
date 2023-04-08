@@ -1,26 +1,23 @@
-import { App } from '~/App'
-import { render, screen, userEvent } from '~/test/test-utils'
+import { type MockStore, setupStore } from '~/test/setup-store'
+import { renderWithProviders, screen } from '~/test/test-utils'
+
+import { Cart } from '~/components/cart/Cart'
+import { initialState as cart } from '~/features/cart/cart.state'
 
 describe('App', () => {
-  it('should render application properly', () => {
-    render(<App />)
+  let store: MockStore
 
-    expect(screen.findByText('Vite + React')).toBeTruthy()
+  beforeEach(() => {
+    store = setupStore({
+      preloadedState: {
+        cart,
+      },
+    })
+
+    renderWithProviders(<Cart />, { store })
   })
 
-  describe('Counter mechanism', () => {
-    it('should increment counter', async () => {
-      render(<App />)
-
-      let incrementButton = await screen.findByText('count is 0')
-
-      expect(incrementButton).toBeTruthy()
-
-      userEvent.click(incrementButton)
-
-      incrementButton = await screen.findByText('count is 1')
-
-      expect(incrementButton).toBeTruthy()
-    })
+  it('should render application properly', () => {
+    expect(screen.findByText('Cart is empty')).toBeTruthy()
   })
 })
