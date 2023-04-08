@@ -6,7 +6,8 @@
   "compilerOptions": {
     "checkJs": false,
     "types": [
-      "vite/client"
+      "vite/client",
+      "vitest/globals"
     ],
     "baseUrl": "./src",
     "paths": {

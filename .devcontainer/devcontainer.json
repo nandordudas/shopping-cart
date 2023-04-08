@@ -22,7 +22,8 @@
         "IBM.output-colorizer",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens",
-        "mutantdino.resourcemonitor"
+        "mutantdino.resourcemonitor",
+        "ZixuanChen.vitest-explorer"
       ],
       "settings": {
         "editor.detectIndentation": false,

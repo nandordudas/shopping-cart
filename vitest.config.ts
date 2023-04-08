@@ -1,15 +1,19 @@
 import { fileURLToPath } from 'node:url'
 
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import { defineConfig } from 'vitest/config'
 
 const root = fileURLToPath(new URL('./src', import.meta.url))
 
 export default defineConfig({
-  plugins: [react()],
   resolve: {
     alias: {
       '~': root,
     },
+  },
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    reporters: 'verbose',
+    setupFiles: './src/test/setup.ts',
   },
 })

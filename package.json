@@ -5,10 +5,13 @@
   "private": true,
   "scripts": {
     "build": "tsc && vite build",
+    "coverage": "vitest run --coverage",
     "dev": "vite --host",
     "lint:fix": "eslint . --cache --fix",
     "lint": "eslint . --cache",
     "preview": "vite preview",
+    "test:ui": "vitest --ui",
+    "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -17,14 +20,21 @@
   },
   "devDependencies": {
     "@antfu/eslint-config-react": "^0.38.4",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
     "@tsconfig/strictest": "^2.0.0",
     "@tsconfig/vite-react": "^1.0.1",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "@vitest/coverage-c8": "^0.29.8",
+    "@vitest/ui": "^0.29.8",
     "eslint": "^8.38.0",
+    "jsdom": "^21.1.1",
     "typescript": "^5.0.4",
-    "vite": "^4.2.0"
+    "vite": "^4.2.0",
+    "vitest": "^0.29.8"
   }
 }
