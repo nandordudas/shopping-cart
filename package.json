@@ -1,11 +1,13 @@
 {
   "name": "app",
-  "private": true,
-  "version": "0.1.0",
   "type": "module",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "build": "tsc && vite build",
     "dev": "vite",
+    "lint:fix": "eslint . --cache --fix",
+    "lint": "eslint . --cache",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"
   },
@@ -14,11 +16,13 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config-react": "^0.38.4",
     "@tsconfig/strictest": "^2.0.0",
     "@tsconfig/vite-react": "^1.0.1",
-    "@types/react-dom": "^18.0.11",
     "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "eslint": "^8.38.0",
     "typescript": "^5.0.4",
     "vite": "^4.2.0"
   }

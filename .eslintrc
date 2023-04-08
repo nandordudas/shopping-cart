@@ -1,0 +1,17 @@
+{
+  "extends": "@antfu/eslint-config-react",
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "complexity": [
+      "error",
+      5
+    ],
+    "max-len": [
+      "error",
+      120
+    ]
+  }
+}
