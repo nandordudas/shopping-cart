@@ -1,24 +1,22 @@
 import { type MockStore, setupStore } from '~/test/setup-store'
 import { renderWithProviders, screen } from '~/test/test-utils'
 
-import { Cart } from '~/components/cart/Cart'
+import { initialState as products } from '~/features/product/product.state'
 import { initialState as cart } from '~/features/cart/cart.state'
 import { APP_TITLE } from '~/App.constants'
+import { App } from '~/App'
 
 describe('App', () => {
-  let store: MockStore
-
-  beforeEach(() => {
-    store = setupStore({
+  it('should render application properly', () => {
+    const store: MockStore = setupStore({
       preloadedState: {
         cart,
+        products,
       },
     })
 
-    renderWithProviders(<Cart />, { store })
-  })
+    renderWithProviders(<App />, { store })
 
-  it('should render application properly', () => {
     expect(screen.findByText(APP_TITLE)).toBeTruthy()
   })
 })
