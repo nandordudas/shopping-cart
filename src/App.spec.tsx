@@ -3,6 +3,7 @@ import { renderWithProviders, screen } from '~/test/test-utils'
 
 import { Cart } from '~/components/cart/Cart'
 import { initialState as cart } from '~/features/cart/cart.state'
+import { APP_TITLE } from '~/App.constants'
 
 describe('App', () => {
   let store: MockStore
@@ -18,6 +19,6 @@ describe('App', () => {
   })
 
   it('should render application properly', () => {
-    expect(screen.findByText('Cart is empty')).toBeTruthy()
+    expect(screen.findByText(APP_TITLE)).toBeTruthy()
   })
 })
