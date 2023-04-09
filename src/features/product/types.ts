@@ -2,7 +2,7 @@ import type { Entity } from '~/types'
 
 export interface Product extends Entity {
   description: string
-  images: string
+  images: string[]
   price: number
   thumbnail: string
   title: string

@@ -8,9 +8,7 @@ interface ProductResult {
   products: Product[]
 }
 
-export const getProducts = createAsyncThunk<
-  Product[], void, { rejectValue: ErrorInterfaceWithStatus | ErrorInterface }
->(
+export const getProductsThunk = createAsyncThunk<Product[], void>(
   'products/getProducts',
   async (_, thunkAPI) => {
     const { rejectWithValue } = thunkAPI
@@ -24,7 +22,7 @@ export const getProducts = createAsyncThunk<
       if (!axios.isAxiosError(error)) {
         return rejectWithValue({
           message: 'Something went wrong...',
-        })
+        } as ErrorInterface)
       }
 
       const { message, response } = error
@@ -32,7 +30,7 @@ export const getProducts = createAsyncThunk<
       return rejectWithValue({
         message,
         status: response?.status || 500,
-      })
+      } as ErrorInterfaceWithStatus)
     }
   },
 )

@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-import { getProducts } from './product.thunks'
+import { getProductsThunk } from './product.thunks'
 import { initialState } from './product.state'
 
 export const productsSlice = createSlice({
@@ -11,17 +11,20 @@ export const productsSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(getProducts.pending, (state) => {
+      .addCase(getProductsThunk.pending, (state) => {
         state.isLoading = true
       })
-      .addCase(getProducts.fulfilled, (state, { payload }) => {
+      .addCase(getProductsThunk.fulfilled, (state, { payload }) => {
         state.isLoading = false
         state.products = payload
       })
-      .addCase(getProducts.rejected, (state, { payload }) => {
+      .addCase(getProductsThunk.rejected, (state, { payload }) => {
         state.isLoading = false
         // @ts-expect-error payload could be ErrorInterfaceWithStatus | ErrorInterface
         state.error = payload!
       })
   },
 })
+
+export type ProductActions =
+  | ReturnType<typeof productsSlice.actions[keyof typeof productsSlice.actions]>
