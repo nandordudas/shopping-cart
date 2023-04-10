@@ -1,10 +1,9 @@
 import { type CombinedState, type Middleware, type PreloadedState } from '@reduxjs/toolkit'
 import configureStore from 'redux-mock-store'
-import thunk from 'redux-thunk'
+import { thunk } from 'redux-thunk'
 
+import type { Actions } from './types'
 import { type RootState, store } from '~/app/store/store'
-import type { CartActions } from '~/features/cart/cart.slice'
-import type { ProductActions } from '~/features/product/product.slice'
 
 interface ExtendedStoreOptions<State extends CombinedState<unknown>> {
   preloadedState?: PreloadedState<State>
@@ -26,9 +25,5 @@ export function setupStore<State, Actions>({
 
   return store
 }
-
-type Actions =
-  | CartActions
-  | ProductActions
 
 export type MockStore = ReturnType<typeof setupStore<RootState, Actions>>

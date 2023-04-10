@@ -34,7 +34,8 @@
     "jsx": "react-jsx",
     "types": [
       "vite/client",
-      "vitest/globals"
+      "vitest/globals",
+      "redux-thunk/extend-redux"
     ],
     "baseUrl": "./src",
     "paths": {

@@ -3,6 +3,7 @@ import type { AsyncThunk, PreloadedState } from '@reduxjs/toolkit'
 import type { PropsWithChildren, ReactElement } from 'react'
 import { Provider } from 'react-redux'
 
+import type { Actions } from './types'
 import type { RootState, store } from '~/app/store/store'
 import { setupStore } from '~/test/setup-store'
 
@@ -55,4 +56,15 @@ export function expectThunk<Thunk extends AsyncThunk<any, any, any>>(
     ...(args ? { meta: expect.objectContaining({ arg: args }) } : {}),
     type: thunk[state].type,
   })
+}
+
+export function testAction<S = RootState, A = Actions>(
+  initialState: S,
+  expectedState: S,
+  action: A,
+  reducer: (state: S, action: A) => S,
+) {
+  const actualState = reducer(initialState, action)
+
+  expect(actualState).toEqual(expectedState)
 }
