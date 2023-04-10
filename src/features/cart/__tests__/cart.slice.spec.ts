@@ -8,6 +8,7 @@ import {
 } from '~/features/cart/cart.slice'
 import type { CartItem } from '~/features/cart/types'
 import { initialState as cart } from '~/features/cart/cart.state'
+import { testAction } from '~/test/test-utils'
 
 const mockCartItem: CartItem = {
   amount: 1,
@@ -19,10 +20,14 @@ const mockCartItem: CartItem = {
 
 describe('cart reducer', () => {
   it('should add item to cart', () => {
-    const actualState = cartSlice.reducer(cart, addToCart(mockCartItem))
-
-    expect(actualState.items.at(0)).toBeTruthy()
-    expect(actualState.items.at(0)!.amount).toEqual(1)
+    // TODO: use this helper on other places too
+    testAction(cart, {
+      ...cart,
+      items: [
+        ...cart.items,
+        mockCartItem,
+      ],
+    }, addToCart(mockCartItem), cartSlice.reducer)
   })
 
   it('should reset cart', async () => {

@@ -28,3 +28,4 @@ export const productsSlice = createSlice({
 
 export type ProductActions =
   | ReturnType<typeof productsSlice.actions[keyof typeof productsSlice.actions]>
+  | typeof getProductsThunk

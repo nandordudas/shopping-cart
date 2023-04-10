@@ -1,4 +1,3 @@
-import type { AnyAction } from '@reduxjs/toolkit'
 import { type MockStore, setupStore } from '~/test/setup-store'
 import { expectThunk } from '~/test/test-utils'
 
@@ -16,13 +15,13 @@ describe('Product', () => {
     })
   })
 
-  it.todo('should fetch products', async () => {
+  it('should fetch products', async () => {
     const expectedThunks = [
       expectThunk(getProductsThunk),
       expectThunk(getProductsThunk, undefined, 'fulfilled'),
     ]
 
-    store.dispatch(getProductsThunk() as unknown as AnyAction)
+    await store.dispatch(getProductsThunk())
 
     expect(store.getActions()).toEqual(expectedThunks)
   })

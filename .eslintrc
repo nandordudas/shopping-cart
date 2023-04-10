@@ -13,5 +13,8 @@
       "error",
       120
     ]
-  }
+  },
+  "ignorePatterns": [
+    "**/test/mocks/products.json"
+  ]
 }

@@ -11,14 +11,14 @@ interface ProductResult {
 export const getProductsThunk = createAsyncThunk<Product[], void>(
   'products/getProducts',
   async (_, thunkAPI) => {
-    const { rejectWithValue } = thunkAPI
-
     try {
       const result = await axios.get<ProductResult>(PRODUCTS_URL)
 
       return result.data.products
     }
     catch (error) {
+      const { rejectWithValue } = thunkAPI
+
       if (!axios.isAxiosError(error)) {
         return rejectWithValue({
           message: 'Something went wrong...',
