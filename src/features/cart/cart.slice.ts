@@ -1,8 +1,9 @@
 import { type PayloadAction, createSlice } from '@reduxjs/toolkit'
 
+import type { Entity } from '~/types'
+
 import { initialState } from './cart.state'
 import type { CartItem } from './types'
-import type { Entity } from '~/types'
 
 interface ChangeAmountProps extends Entity {
   method: 'decrease' | 'increase'

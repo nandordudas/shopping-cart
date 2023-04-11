@@ -2,8 +2,9 @@ import { type CombinedState, type Middleware, type PreloadedState } from '@redux
 import configureStore from 'redux-mock-store'
 import { thunk } from 'redux-thunk'
 
-import type { Actions } from './types'
 import { type RootState, store } from '~/app/store/store'
+
+import type { Actions } from './types'
 
 interface ExtendedStoreOptions<State extends CombinedState<unknown>> {
   preloadedState?: PreloadedState<State>

@@ -1,6 +1,6 @@
-import { fileURLToPath } from 'node:url'
-
 import { defineConfig } from 'vitest/config'
+
+import { fileURLToPath } from 'node:url'
 
 const root = fileURLToPath(new URL('./src', import.meta.url))
 

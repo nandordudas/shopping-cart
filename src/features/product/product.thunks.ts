@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import axios from 'axios'
 
-import type { ErrorInterface, ErrorInterfaceWithStatus, Product } from './types'
 import { PRODUCTS_URL } from './product.constants'
+import type { ErrorInterface, ErrorInterfaceWithStatus, Product } from './types'
 
 interface ProductResult {
   products: Product[]

@@ -6,8 +6,8 @@ import {
   removeItemFromCart,
   reset,
 } from '~/features/cart/cart.slice'
-import type { CartItem } from '~/features/cart/types'
 import { initialState as cart } from '~/features/cart/cart.state'
+import type { CartItem } from '~/features/cart/types'
 import { testAction } from '~/test/test-utils'
 
 const mockCartItem: CartItem = {

@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+
 import { useAppDispatch, useAppSelector } from '~/app/store/hooks'
 import { selectIsProductLoading, selectProducts } from '~/features/product/product.selectors'
 import { getProductsThunk } from '~/features/product/product.thunks'
