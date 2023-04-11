@@ -4,7 +4,7 @@ import { initialState } from './product.state'
 import { getProductsThunk } from './product.thunks'
 
 export const productsSlice = createSlice({
-  name: 'products',
+  name: 'product',
   initialState,
   reducers: {
     // it has no reducers
@@ -26,6 +26,7 @@ export const productsSlice = createSlice({
   },
 })
 
+// Testing purposes only.
 export type ProductActions =
   | ReturnType<typeof productsSlice.actions[keyof typeof productsSlice.actions]>
   | typeof getProductsThunk

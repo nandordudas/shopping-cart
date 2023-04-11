@@ -3,7 +3,7 @@ import { createSelector } from '@reduxjs/toolkit'
 import type { RootState } from '~/app/store/store'
 
 function rootSelector(state: RootState) {
-  return state.products
+  return state.product
 }
 
 export const selectIsProductLoading = createSelector(

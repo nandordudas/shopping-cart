@@ -18,9 +18,11 @@ export function Cart() {
     <section>
       <h2>Cart items</h2>
       <ul>
-        {cartItems.map(item => <li key={item.id}>{item.title}</li>)}
+        {cartItems.map(item =>
+          <li key={item.id}>{item.title}</li>,
+        )}
       </ul>
-      <p>Total: {total} $</p>
+      <p>Total: $ {total}</p>
     </section>
   )
 }

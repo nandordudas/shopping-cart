@@ -4,15 +4,15 @@ import axios from 'axios'
 import { PRODUCTS_URL } from './product.constants'
 import type { ErrorInterface, ErrorInterfaceWithStatus, Product } from './types'
 
-interface ProductResult {
-  products: Product[]
+interface ProductResult<Item extends object> {
+  products: Item[]
 }
 
 export const getProductsThunk = createAsyncThunk<Product[], void>(
-  'products/getProducts',
+  'product/getProducts',
   async (_, thunkAPI) => {
     try {
-      const result = await axios.get<ProductResult>(PRODUCTS_URL)
+      const result = await axios.get<ProductResult<Product>>(PRODUCTS_URL)
 
       return result.data.products
     }

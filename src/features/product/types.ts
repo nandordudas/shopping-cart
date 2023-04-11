@@ -8,17 +8,17 @@ export interface Product extends Entity {
   title: string
 }
 
-export interface ProductsState {
+export interface ProductState<Item extends object> {
   isLoading: boolean
-  products: Product[]
+  products: Item[]
 }
 
-export interface ProductsStateWithError extends ProductsState {
+export interface ProductStateWithError extends ProductState<Product> {
   error: ErrorInterface
 }
 
 export interface ErrorInterface {
-  message: string
+  message: string | null
 }
 
 export interface ErrorInterfaceWithStatus extends ErrorInterface {

@@ -6,8 +6,6 @@ import { Provider } from 'react-redux'
 import type { RootState, store } from '~/app/store/store'
 import { setupStore } from '~/test/setup-store'
 
-import type { Actions } from './types'
-
 interface ExtendedRenderOptions<State extends RootState> extends Omit<RenderOptions, 'queries'> {
   preloadedState?: PreloadedState<State>
   store?: typeof store
@@ -39,7 +37,7 @@ export function renderWithProviders(
 export * from '@testing-library/react'
 export { default as userEvent } from '@testing-library/user-event'
 
-export type ThunkArgs<T> = T extends AsyncThunk<infer _Returned, infer ThunkArg, infer _ThunkApiConfig>
+type ThunkArgs<T> = T extends AsyncThunk<infer _Returned, infer ThunkArg, infer _ThunkApiConfig>
   ? ThunkArg
   : never
 
@@ -59,11 +57,11 @@ export function expectThunk<Thunk extends AsyncThunk<any, any, any>>(
   })
 }
 
-export function testAction<S = RootState, A = Actions>(
-  initialState: S,
-  expectedState: S,
-  action: A,
-  reducer: (state: S, action: A) => S,
+export function testAction<State, Actions>(
+  initialState: State,
+  expectedState: State,
+  action: Actions,
+  reducer: (state: State, action: Actions) => State,
 ) {
   const actualState = reducer(initialState, action)
 

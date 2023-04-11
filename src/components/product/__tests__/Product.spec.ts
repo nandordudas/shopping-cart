@@ -1,4 +1,4 @@
-import { initialState as products } from '~/features/product/product.state'
+import { initialState as product } from '~/features/product/product.state'
 import { getProductsThunk } from '~/features/product/product.thunks'
 import { type MockStore, setupStore } from '~/test/setup-store'
 import { expectThunk } from '~/test/test-utils'
@@ -9,7 +9,7 @@ describe('Product', () => {
   beforeEach(() => {
     store = setupStore({
       preloadedState: {
-        products,
+        product,
       },
     })
   })

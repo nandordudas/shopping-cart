@@ -1,9 +1,9 @@
-import type { ProductsState, ProductsStateWithError } from './types'
+import type { Product, ProductState, ProductStateWithError } from './types'
 
-export const initialState: ProductsState | ProductsStateWithError = {
+export const initialState: ProductState<Product> & ProductStateWithError = {
   isLoading: true,
   error: {
-    message: '',
+    message: null,
   },
   products: [],
 }
