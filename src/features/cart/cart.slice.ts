@@ -72,6 +72,3 @@ export const {
   removeItemFromCart,
   reset,
 } = cartSlice.actions
-
-// Testing purposes only.
-export type CartActions = ReturnType<typeof cartSlice.actions[keyof typeof cartSlice.actions]>

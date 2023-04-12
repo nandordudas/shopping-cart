@@ -25,8 +25,3 @@ export const productsSlice = createSlice({
       })
   },
 })
-
-// Testing purposes only.
-export type ProductActions =
-  | ReturnType<typeof productsSlice.actions[keyof typeof productsSlice.actions]>
-  | typeof getProductsThunk

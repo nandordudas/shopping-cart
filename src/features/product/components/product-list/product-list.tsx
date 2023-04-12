@@ -26,10 +26,10 @@ export function ProductList() {
       return (
         <div className="error-container">
           <p className="error-status">
-            {error!.status}
+            {error.status}
           </p>
           <p className="error-message">
-            {error!.message}
+            {error.message}
           </p>
         </div>
       )
