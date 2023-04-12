@@ -1,0 +1,9 @@
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-link {
+  color: var(--main-font-color);
+  text-decoration: none;
+}

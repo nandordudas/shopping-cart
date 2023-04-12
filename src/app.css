@@ -1,0 +1,8 @@
+#root {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.button:hover {
+  filter: invert()
+}

@@ -10,6 +10,6 @@ export interface CartState<Item extends object> {
 export const initialState: CartState<CartItem> = {
   amount: 0,
   items: [],
-  isLoading: true,
+  isLoading: false, // TODO: missing functionality
   total: 0,
 }

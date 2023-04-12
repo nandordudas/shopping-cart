@@ -2,6 +2,8 @@ import { createSelector } from '@reduxjs/toolkit'
 
 import type { RootState } from '~/app/store/store'
 
+import { currencyFormatter } from './utils/curency-formatter'
+
 function rootSelector(state: RootState) {
   return state.cart
 }
@@ -18,7 +20,7 @@ export const selectIsCartEmpty = createSelector(
 
 export const selectTotal = createSelector(
   rootSelector,
-  state => state.total.toFixed(2),
+  state => currencyFormatter.format(state.total),
 )
 
 export const selectAmount = createSelector(

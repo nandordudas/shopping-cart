@@ -1,5 +1,5 @@
-import { App } from '~/App'
-import { APP_TITLE } from '~/App.constants'
+import { App } from '~/app'
+import { APP_TITLE } from '~/app.constants'
 import { initialState as cart } from '~/features/cart/cart.state'
 import { initialState as product } from '~/features/product/product.state'
 import { type MockStore, setupStore } from '~/test/setup-store'

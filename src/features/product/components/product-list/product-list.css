@@ -1,0 +1,16 @@
+.product-list {
+  margin-bottom: 100px;
+}
+.error-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.error-status {
+  font-size: 3.5rem;
+  color: var(--error-color);
+}
+
+.error-message {
+  font-size: 1rem;
+}

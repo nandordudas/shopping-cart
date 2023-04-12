@@ -15,3 +15,14 @@ export const selectProducts = createSelector(
   rootSelector,
   state => state.products,
 )
+
+export const selectError = createSelector(
+  rootSelector,
+  state => state.error,
+)
+
+// INFO: not used yet
+export const selectHasError = createSelector(
+  selectError,
+  error => error !== null,
+)

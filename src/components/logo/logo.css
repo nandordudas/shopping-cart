@@ -1,0 +1,6 @@
+.logo {
+  color: var(--logo-color);
+  font-size: 1.5rem;
+  font-family: var(--logo-font);
+  text-decoration: none;
+}

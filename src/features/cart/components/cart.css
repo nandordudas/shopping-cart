@@ -1,0 +1,20 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.cart .total {
+  text-align: right;
+  font-weight: 700;
+  margin: 50px 0;
+}
+
+.cart .cart-items {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}

@@ -13,14 +13,14 @@ export interface ProductState<Item extends object> {
   products: Item[]
 }
 
-export interface ProductStateWithError extends ProductState<Product> {
-  error: ErrorInterface
-}
-
 export interface ErrorInterface {
-  message: string | null
+  message: string
 }
 
 export interface ErrorInterfaceWithStatus extends ErrorInterface {
   status: number
+}
+
+export interface ProductStateWithError extends ProductState<Product> {
+  error: ErrorInterfaceWithStatus | null
 }

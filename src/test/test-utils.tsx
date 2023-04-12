@@ -2,6 +2,7 @@ import type { AsyncThunk, PreloadedState } from '@reduxjs/toolkit'
 import { type RenderOptions, render } from '@testing-library/react'
 import type { PropsWithChildren, ReactElement } from 'react'
 import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
 
 import type { RootState, store } from '~/app/store/store'
 import { setupStore } from '~/test/setup-store'
@@ -20,9 +21,11 @@ export function renderWithProviders(
   }: ExtendedRenderOptions<RootState> = {},
 ) {
   const wrapper = ({ children }: PropsWithChildren) => (
-    <Provider store={store}>
-      {children}
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        {children}
+      </Provider>
+    </BrowserRouter>
   )
 
   return {
